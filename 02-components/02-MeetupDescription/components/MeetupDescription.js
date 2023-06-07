@@ -5,8 +5,7 @@ export default defineComponent({
   props: {
     description: {
       type: String,
-      default: ''
-    }
+    },
   },
 
   template: `<p class="meetup-description">{{ description }}</p>`,
