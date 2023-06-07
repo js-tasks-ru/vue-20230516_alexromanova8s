@@ -1,4 +1,4 @@
-import { createApp, reactive, computed, watch } from './vendor/vue.esm-browser.js';
+import { createApp, toRefs, reactive, computed, watch } from './vendor/vue.esm-browser.js';
 
 const API_URL = 'https://course-vue.javascript.ru/api';
 
@@ -34,7 +34,7 @@ createApp({
     });
 
     return {
-      data,
+      ...toRefs(data),
       meetupTitle,
     };
   },

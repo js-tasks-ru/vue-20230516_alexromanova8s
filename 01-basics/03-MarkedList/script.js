@@ -1,4 +1,4 @@
-import { createApp, computed, reactive } from './vendor/vue.esm-browser.js';
+import { createApp, computed, toRefs, reactive } from './vendor/vue.esm-browser.js';
 
 // From https://jsonplaceholder.typicode.com/comments
 const emails = [
@@ -40,7 +40,7 @@ createApp({
     });
 
     return {
-      data,
+      ...toRefs(data),
       emailsData,
     };
   },

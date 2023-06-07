@@ -14,7 +14,7 @@
     <div id="app" style="margin-top: 2rem">
       <div class="container">
         <div class="form-group">
-          <input type="search" v-model="data.query" />
+          <input type="search" v-model="query" />
         </div>
         <ul>
           <li v-for="item in emailsData" :key="item.email" :class="{marked: item.isMarked}">{{item.email}}</li>
