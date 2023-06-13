@@ -17,13 +17,7 @@ export default defineComponent({
   template: `
     <div class="sample container">
       <p>count = {{ count }}</p>
-      <p>
-        <CounterButton v-model:count="count" />
-      </p>
-      <p>
-        <CounterButton v-model:count="count" />
-      </p>
-      <p>
+      <p v-for="item in 3">
         <CounterButton v-model:count="count" />
       </p>
     </div>
