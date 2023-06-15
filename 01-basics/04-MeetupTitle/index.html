@@ -8,7 +8,7 @@
     <div id="app">
       <div>
         <label v-for="index in 5" :key="index">
-          <input type="radio" name="meetupId" v-model="data.currentMeetupId" :value="index" />{{ index }}
+          <input type="radio" name="meetupId" v-model="currentMeetupId" :value="index" />{{ index }}
         </label>
         <hr />
         <h3>{{ meetupTitle }}</h3>

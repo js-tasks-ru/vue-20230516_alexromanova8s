@@ -1,13 +1,11 @@
 import { defineComponent } from './vendor/vue.esm-browser.js';
 import MeetupAgenda from './components/MeetupAgenda.js';
-import MeetupAgendaItem from './components/MeetupAgendaItem.js';
 
 export default defineComponent({
   name: 'App',
 
   components: {
     MeetupAgenda,
-    MeetupAgendaItem,
   },
 
   data() {
@@ -51,21 +49,6 @@ export default defineComponent({
 
   template: `
     <div class="sample container">
-      <h2>MeetupAgendaItem</h2>
-      <h3>Регистрация</h3>
-      <div>
-        <MeetupAgendaItem :agenda-item="agenda[0]" />
-      </div>
-      <h3>Открытие (нестандартный заголовок)</h3>
-      <div>
-        <MeetupAgendaItem :agenda-item="agenda[1]" />
-      </div>
-      <h3>Доклад</h3>
-      <div>
-        <MeetupAgendaItem :agenda-item="agenda[2]" />
-      </div>
-
-      <h2>MeetupAgenda</h2>
       <MeetupAgenda :agenda="agenda" />
     </div>
   `,

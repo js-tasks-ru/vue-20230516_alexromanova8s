@@ -1,4 +1,4 @@
-import { createApp, reactive, computed } from './vendor/vue.esm-browser.js';
+import { createApp, toRefs, computed, reactive } from './vendor/vue.esm-browser.js';
 
 createApp({
   setup() {
@@ -22,7 +22,7 @@ createApp({
     });
 
     return {
-      data,
+      ...toRefs(data),
       result,
     };
   },
