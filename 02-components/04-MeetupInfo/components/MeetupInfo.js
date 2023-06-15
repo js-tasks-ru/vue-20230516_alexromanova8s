@@ -20,7 +20,7 @@ export default defineComponent({
 
   computed: {
     formattedDate() {
-      return format(this.date ? new Date(this.date) : new Date(), 'yyyy-MM-dd');
+      return format(new Date(this.date), 'yyyy-MM-dd');
     },
     localeDate() {
       return new Date(this.date).toLocaleDateString(navigator.language, { day: 'numeric', month: 'long', year: 'numeric' });
